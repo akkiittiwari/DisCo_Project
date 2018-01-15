@@ -55,7 +55,7 @@ fileNames = glob.glob(folderName +'*_resized/*.jpg')
 # only test 20 files for now
 NumberOfFileToBetested = 20
 
-x_values, y_values = convertToNumpy(fileNames[:NumberOfFileToBetested])
+# x_values, y_values = convertToNumpy(fileNames[:NumberOfFileToBetested])
 
-print x_values
-print y_values
+# print x_values
+# print y_values 
