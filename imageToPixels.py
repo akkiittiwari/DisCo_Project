@@ -25,7 +25,7 @@ def ageAtPhoto(fileName):
     yob is 1891
     dtpt is 1958
     '''
-    basename = x.split('/')[-1].split('_')
+    basename = fileName('/')[-1].split('_')
     birth = int(basename[1].split('-')[0])
     today = int(basename[2].split('.')[0])
     currAge = abs(today - birth)
