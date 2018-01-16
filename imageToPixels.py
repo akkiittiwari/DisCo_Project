@@ -12,7 +12,7 @@ def load_image2(infilename) :
     convert image file to pixels
     load_image2('fileName')
     '''
-    img = Image.open(infilename)
+    img = Image.open(infilename).convert('L')
     data = np.array(img)
     return data
 
@@ -43,17 +43,17 @@ def convertToNumpy(folder):
     ages = []
     for fileName in folder:
         if fileName.endswith(".jpg" or ".jpeg" or ".png"):
-            pixels.append(load_image2(fileName))
+            pixels.append(np.ravel(load_image2(fileName)))
             ages.append(ageAtPhoto(fileName))
     return pixels, ages
 
 
 # Running This:    
 
-folderName = '/Users/mbk/desktop/wiki_crop/' 
-fileNames = glob.glob(folderName +'*_resized/*.jpg')
+#folderName = '/Users/mbk/desktop/wiki_crop/' 
+#fileNames = glob.glob(folderName +'*_resized/*.jpg')
 # only test 20 files for now
-NumberOfFileToBetested = 20
+#NumberOfFileToBetested = 20
 
 # x_values, y_values = convertToNumpy(fileNames[:NumberOfFileToBetested])
 

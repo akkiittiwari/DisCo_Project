@@ -42,4 +42,4 @@ def resizer(folderPath):
 
 # to resize all images in given folder, run this 
 
-resizer('/Users/shsu/Downloads/dump2')
+resizer('/Users/davidkes/classes/697/Project/wiki_crop/')
