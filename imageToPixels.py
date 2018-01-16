@@ -19,19 +19,18 @@ def load_image2(infilename) :
 
 def ageAtPhoto(fileName):
     '''
-    get age at time of photo 
+    get age at time of photo
     ageAtPhoto('full_path_to_file')
     10049200_1891-09-16_1958.jpg
     yob is 1891
-    dtpt is 1958 
+    dtpt is 1958
     '''
-    tailPath = os.path.basename(fileName)
-    matchObj = re.search(r'^[^_]+_([^_]+)_[^_]+$', tailPath)
-    yob = int(matchObj.group(1)[:4])
-    nojpg = matchObj.group(0)[:-4]
-    dtpt = int(nojpg[-4:])
-    currAge = abs(dtpt - yob)
+    basename = x.split('/')[-1].split('_')
+    birth = int(basename[1].split('-')[0])
+    today = int(basename[2].split('.')[0])
+    currAge = abs(today - birth)
     return currAge
+
 
 
 def convertToNumpy(folder):
