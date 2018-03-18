@@ -19,3 +19,10 @@ Image resizing / similar project to this
 https://www.machinelearningpython.org/single-post/face-to-Age-Prediction
 
 
+Steps not included in the code :
+
+1. Pulling raw data from S3 into our AWS instance 
+
+2. Unzipping and arranging the data in the instance for easy access
+
+- These steps can be avoided by directly pulling the data from S3 on runtime but in our case as the dataset is of fixed limited size, this way works better.
