@@ -8,7 +8,7 @@ Preprocessing:
 
 3. Lastly, load the images and run logistic regression on the pixels to classify age.
 
-Check out final.ipynb to see what we actually did.
+Check out final.ipynb to see the final product of the project
 
 
 
